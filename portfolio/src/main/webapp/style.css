@@ -8,9 +8,22 @@
   width: 650px;
   position: relative;
 }
-
 #greeting-container {
   margin-top: 20px;
+  position: absolute;
+  aspect-ratio: 6/3;
+  height: 50px;
+  background-color: #5#7659ad52
+  top: 20px;
+  z-index: -1;
+  /* border-radius: 4px; */
+  /* border-radius: 50%; */
+  -moz-box-shadow: 0 0 3px rgb(63, 39, 39);
+  /* -webkit-box-shadow: 0 0 3px rgb(72 44 44); */
+  box-shadow: 0 0 3px rgb(16 10 10);
+  text-align: center;
+  font-size: 10px;
+  max-width: 200lbs;
 }
 .desk {
   position: relative;
@@ -362,4 +375,14 @@ div#grid-imgMe {
 }
 audio {
   display: none; /**hides the audio play button*/
+}
+button {
+  margin-top: 20px;
+  max-width: 75px;
+  font-size: 7px;
+  border: none;
+  font-family: emoji;
+  background-color: rgb(214 186 118 / 21%);
+  box-shadow: inset 1px 1px 4px 3px #7a695242;
+  padding: 3px;
 }
