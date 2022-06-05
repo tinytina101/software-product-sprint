@@ -39,8 +39,8 @@
         <div class="clockShape">
           <div class="clock">
             <div class="time">
-              <span id="hour">00</span>:
-              <span id="minutes">00</span>
+              <span id="hour">00</span>: <span id="minutes">00</span>:
+              <span id="seconds">00</span>
             </div>
             <div class="date">
               <span id="week">Mon</span> &nbsp <span id="month">01</span>/
@@ -59,20 +59,36 @@
               dateNum = date.getDate(),
               year = date.getFullYear(),
               hour = date.getHours(),
-              min = date.getMinutes();
+              min = date.getMinutes(),
+              seconds = date.getSeconds();
 
             var week = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
-            var ids = ["hour", "minutes", "week", "month", "day", "year"];
-            var idValues = [hour, min, week[dateName], month, dateNum, year];
+            var ids = [
+              "hour",
+              "minutes",
+              "seconds",
+              "week",
+              "month",
+              "day",
+              "year",
+            ];
+            var idValues = [
+              hour,
+              min,
+              seconds,
+              week[dateName],
+              month,
+              dateNum,
+              year,
+            ];
             for (var i = 0; i < ids.length; i++) {
               document.getElementById(ids[i]).firstChild.nodeValue =
                 idValues[i];
             }
           }
-
           function setClock() {
             updateClock();
-            window.setInterval("updateClock", 1000); //check it every second
+            window.setInterval("updateClock()", 1); //check it every second
           }
         </script>
       </div>
