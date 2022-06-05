@@ -19,7 +19,7 @@ function addRandomGreeting() {
   const greetings = [
     "I don't like papaya.",
     'I\'m currently watching "Our Blues","Sh**ting Stars", and "House".',
-    "I've crotched the Among Us characters.",
+    "I've crocheted the Among Us characters.",
     "My art has been in the High Museum of Arts (Atlanta) in High School.",
   ];
 
