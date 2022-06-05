@@ -8,10 +8,11 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Orbitron"
+      href="https://fonts.googleapis.com/css2?family=Orbitron&family=Patrick+Hand&display=swap"
       rel="stylesheet"
-      type="text/css"
     />
     <script
       src="https://kit.fontawesome.com/05fc4fce4b.js"
@@ -23,17 +24,11 @@
     <!--plays the music on loop and on repeat-->
     <audio controls autoplay loop>
       <source
-        src="/portfolio/src/main/webapp/audio/emoji-2oclock(featJUNNY).mp3"
+        src="/portfolio/src/main/webapp/audio/emoji_2oclock_featJUNNY.mp3"
         type="audio/mpeg"
       />
     </audio>
     <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>
-        Click <a href="/hello">here</a> to see content created by server code.
-      </p>
-
       <div class="wall">
         <div class="left">
           <div class="musicBox">
@@ -170,7 +165,63 @@
             <span class="projectLetter"><i class="fa-solid fa-t"></i></span>
             <span class="projectLetter"><i class="fa-solid fa-s"></i></span>
           </div>
-          <div class="projectNotes"></div>
+          <div class="projectNotes">
+            <div class="projectNote">
+              <h3>iTunes Gallery</h3>
+              <h4>(Java)</h4>
+              <ul>
+                <li>GUI app that connects to itunes API</li>
+                <li>20 images are loaded with animation upon search</li>
+              </ul>
+            </div>
+            <div class="projectNote">
+              <h3>Minesweeper</h3>
+              <h4>(Java)</h4>
+              <ul>
+                <li>text based minesweeeper game</li>
+              </ul>
+            </div>
+            <div class="projectNote">
+              <h3>Matrix calculator</h3>
+              <h4>(C++)</h4>
+              <ul>
+                <li>Calculates +, -, *, % of matrices</li>
+              </ul>
+            </div>
+            <div class="projectNote">
+              <h3>Shell</h3>
+              <h4>(C)</h4>
+              <ul>
+                <li>
+                  Implementation of a simple UNIX shell that supports basic
+                  functionality related to launching processes, redirecting
+                  input/output, and bash commands like ls, cat, etc.
+                </li>
+              </ul>
+            </div>
+            <div class="projectNote">
+              <h3>MyDateList</h3>
+              <h4>(HTML, PHP, CSS, JS)</h4>
+              <ul>
+                <li>Website that combines instagram and a blog</li>
+
+                <li>Search/create date posts</li>
+
+                <li>
+                  Date posts are split into 3 catgeories: fancy, causal, home
+                </li>
+
+                <li>Implemented lazy scrolling and WYSIWYG</li>
+              </ul>
+            </div>
+            <div class="projectNote">
+              <h3>This is Tina's portfolio!</h3>
+              <p>
+                Click <a href="/hello">here</a> to see content created by server
+                code. <i class="fa-regular fa-face-grin-stars"></i>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

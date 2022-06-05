@@ -5,7 +5,8 @@
 #content {
   margin-left: auto;
   margin-right: auto;
-  width: 650px;
+  width: fit-content;
+  max-width: 1000px;
   position: relative;
 }
 
@@ -404,4 +405,38 @@ i.fa-solid {
   /* padding: 2px; */
   color: white;
   font-size: 14px;
+}
+
+.projectNotes {
+  font-family: "Patrick Hand", cursive;
+  /*
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 160px);
+  justify-content: center;
+  */
+  margin: auto;
+}
+li {
+  list-style-position: inside;
+  font-size: smaller;
+}
+.projectNote {
+  aspect-ratio: 1/1;
+  overflow: auto;
+  width: 120px;
+  background-color: #ebf4ba;
+  box-shadow: inset 0px 10px 3px 0px #e1d778c7, 3px 2px 3px 2px #0000008f;
+  border: 1px solid #ffff4c94;
+}
+
+.projectNotes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 120px);
+  justify-content: center;
+  column-gap: 20px;
+  max-width: 400px;
+  width: 100%;
+  row-gap: 20px;
+  margin: auto;
+  padding: 0;
 }
