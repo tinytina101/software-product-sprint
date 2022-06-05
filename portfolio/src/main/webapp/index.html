@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <title>Tina's Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Orbitron"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="script.js"></script>
   </head>
-  <body>
+  <body onload="setClock()">
     <div id="content">
       <h1>My Portfolio</h1>
       <p>This is my portfolio.</p>
@@ -24,10 +29,55 @@
             <div class="laptopScreen"></div>
           </div>
           <!-----laptopTop------->
-          <div class="laptopBottom"></div>
+          <div class="laptopBottom">
+            <div id="keyboard"></div>
+            <div id="trackPad"></div>
+          </div>
+          <!--keyboardBottom-->
         </div>
+        <!-------div class laptop---------->
+        <div class="clockShape">
+          <div class="clock">
+            <div class="time">
+              <span id="hour">00</span>:
+              <span id="minutes">00</span>
+            </div>
+            <div class="date">
+              <span id="week">Mon</span> &nbsp <span id="month">01</span>/
+              <span id="day">01</span>/
+              <span id="year">2022</span>
+            </div>
+          </div>
+          <div class="clockSide"></div>
+        </div>
+        <!--class=clockShape--->
+        <script type="text/javascript">
+          function updateClock() {
+            var date = new Date();
+            var dateName = date.getDay(),
+              month = date.getMonth(),
+              dateNum = date.getDate(),
+              year = date.getFullYear(),
+              hour = date.getHours(),
+              min = date.getMinutes();
+
+            var week = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
+            var ids = ["hour", "minutes", "week", "month", "day", "year"];
+            var idValues = [hour, min, week[dateName], month, dateNum, year];
+            for (var i = 0; i < ids.length; i++) {
+              document.getElementById(ids[i]).firstChild.nodeValue =
+                idValues[i];
+            }
+          }
+
+          function setClock() {
+            updateClock();
+            window.setInterval("updateClock", 1000); //check it every second
+          }
+        </script>
       </div>
       <!---class= desk-->
+      <div id="table"></div>
     </div>
     <!------div ID content-->
   </body>
