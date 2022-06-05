@@ -390,3 +390,18 @@ div#grid-imgMe {
 audio {
   display: none; /**hides the audio play button*/
 }
+
+span.projectLetter {
+  border-radius: 50%;
+  background-color: red;
+  box-shadow: 2px 2px 2px 2px rgba(46, 19, 19, 0.267);
+}
+
+i.fa-solid {
+  aspect-ratio: 1/1;
+  width: 20px;
+  text-align: center;
+  /* padding: 2px; */
+  color: white;
+  font-size: 14px;
+}
