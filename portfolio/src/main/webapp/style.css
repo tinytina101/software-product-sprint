@@ -90,7 +90,7 @@ button {
   border: solid 2px rgb(179, 191, 194);
 }
 .laptopScreen {
-  background-image: url(/portfolio/src/main/webapp/images/umaru.gif);
+  background-image: url(/images/umaru.gif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -250,7 +250,7 @@ table {
 #grid-img1 {
   aspect-ratio: 1/1;
   width: 50px;
-  background-image: url(/portfolio/src/main/webapp/images/IU.jpg);
+  background-image: url(/images/IU.jpg);
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container*/
@@ -270,7 +270,7 @@ table {
 div#grid-img2 {
   aspect-ratio: 1/1;
   width: 50px;
-  background-image: url(/portfolio/src/main/webapp/images/cuteBear.gif);
+  background-image: url(/images/cuteBear.gif);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -287,7 +287,7 @@ div#grid-img2 {
 div#grid-img3 {
   aspect-ratio: 1/1;
   width: 50px;
-  background-image: url(/portfolio/src/main/webapp/images/miyamura.jpg);
+  background-image: url(/images/miyamura.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -305,7 +305,7 @@ div#grid-img3 {
 div#grid-img4 {
   aspect-ratio: 9/16;
   width: 40px;
-  background-image: url(/portfolio/src/main/webapp/images/cuteCouple.jpg);
+  background-image: url(/images/cuteCouple.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -323,7 +323,7 @@ div#grid-img4 {
 div#grid-img5 {
   aspect-ratio: 9/16;
   width: 40px;
-  background-image: url(/portfolio/src/main/webapp/images/cloud.png);
+  background-image: url(/images/cloud.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -354,7 +354,7 @@ div#grid-img5 {
 div#grid-imgMe {
   aspect-ratio: 3/3;
   width: 40px;
-  background-image: url(/portfolio/src/main/webapp/images/me.jpg);
+  background-image: url(/images/me.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -385,7 +385,7 @@ div#grid-imgMe {
   top: 0;
   aspect-ratio: 1/1;
   width: 75px;
-  background-image: url(/portfolio/src/main/webapp/images/emoji-2oclock.jpg);
+  background-image: url(/images/emoji-2oclock.jpg);
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container*/
