@@ -5,13 +5,22 @@
 ::-webkit-scrollbar {
   display: none;
 }
-.entireView {
+.entire {
   margin: auto;
   margin-top: 7%;
   width: 800px;
   min-height: fit-content;
   height: 560px;
   position: relative;
+}
+.entireView {
+  margin: auto;
+  /* margin-top: 7%; */
+  width: 800px;
+  min-height: fit-content;
+  height: 560px;
+  position: absolute;
+  top: 0;
   background-color: #e2eeed;
   box-shadow: inset 10px 10px 60px 2px #c5ccce, 0px 0px 16px 8px #070725;
   z-index: -3;
@@ -23,6 +32,7 @@
   width: fit-content;
   max-width: 1000px;
   position: relative;
+  z-index: 1;
 }
 
 button {
