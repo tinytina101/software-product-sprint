@@ -38,7 +38,10 @@
   border: solid 2px rgb(179, 191, 194);
 }
 .laptopScreen {
-  background-color: blueviolet;
+  background-image: url(/portfolio/src/main/webapp/images/umaru.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 90px;
   width: 160px;
   margin: auto;
