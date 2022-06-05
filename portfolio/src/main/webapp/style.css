@@ -7,3 +7,19 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+.laptopTop {
+  height: 105px;
+  width: 170px;
+  background-color: rgb(179, 191, 194);
+  transform: translate(25px, 0px);
+  border-radius: 5px 5px 0px 0px;
+}
+.laptopBottom {
+  border-bottom: 70px solid rgb(179, 191, 194);
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  width: 170px;
+  border-radius: 0px 0px 10px 10px;
+}
