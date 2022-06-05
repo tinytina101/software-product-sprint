@@ -152,8 +152,20 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
+
+.wall {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
+
 .grid {
   width: 200px;
+  z-index: -1;
+}
+.onGrid {
+  position: relative;
 }
 .grid-table,
 .grid-td {
@@ -165,8 +177,9 @@ table {
   position: relative;
   aspect-ratio: 1/1;
   width: 100px;
-  background-color: rgb(228, 180, 180);
+  background-color: rgb(251, 195, 195);
   border-radius: 5px;
+  box-shadow: 5px 5px 4px 2px rgb(155, 147, 147);
 }
 #musicImg {
   position: absolute;
@@ -178,12 +191,14 @@ table {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container*/
   border-radius: 50%;
+  -moz-box-shadow: 0 0 3px rgb(63, 39, 39);
+  -webkit-box-shadow: 0 0 3px rgb(72, 44, 44);
+  box-shadow: 0 0 3px rgb(16, 10, 10);
   top: 12px;
   left: 12px;
   animation-name: spinning;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  /* linear | ease | ease-in | ease-out | ease-in-out */
   animation-timing-function: linear;
 }
 #musicImg:hover:after {
