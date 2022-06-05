@@ -12,9 +12,12 @@
 #greeting-container {
   margin-top: 20px;
 }
-
 .desk {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 .laptopTop {
   position: relative;
@@ -115,4 +118,97 @@ div#table {
   top: 224px;
   left: 0;
   z-index: -1;
+}
+.paper {
+  position: relative;
+  aspect-ratio: 4/3;
+  width: 84px;
+  background-color: rgb(240, 241, 242);
+  transform: skew(65deg, -36deg) rotate(-6deg) translate(-134px, -4px);
+  border: 0.02px solid rgba(107, 111, 113, 0.44);
+  box-shadow: 5px 5px 10px 2px #888888;
+}
+
+#paperStuff {
+  font-size: 6px;
+}
+#hole {
+  margin-left: 3px;
+  width: 2px;
+  height: 2px;
+  background-color: transparent;
+  display: block;
+  border-radius: 50%;
+  border: 0.5px solid #79889e;
+}
+
+tr {
+  border: 0.02px solid rgba(84, 148, 189, 0.44);
+  text-align: center;
+  border-left: none;
+  border-right: none;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.grid {
+  width: 200px;
+}
+.grid-table,
+.grid-td {
+  border: 1px solid #0b0d1d;
+  text-align: left;
+}
+
+.musicBox {
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 100px;
+  background-color: rgb(228, 180, 180);
+  border-radius: 5px;
+}
+#musicImg {
+  position: absolute;
+  top: 0;
+  aspect-ratio: 1/1;
+  width: 75px;
+  background-image: url(/portfolio/src/main/webapp/images/emoji-2oclock.jpg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container*/
+  border-radius: 50%;
+  top: 12px;
+  left: 12px;
+  animation-name: spinning;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  animation-timing-function: linear;
+}
+#musicImg:hover:after {
+  content: "2oclock (feat. JUNNY)";
+  text-align: center;
+  display: block;
+  color: aliceblue;
+}
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#musicHole {
+  position: absolute;
+  aspect-ratio: 1/1;
+  width: 10px;
+  border-radius: 50%;
+  background-color: black;
+  top: 45px;
+  left: 45px;
+}
+audio {
+  display: none; /**hides the audio play button*/
 }
