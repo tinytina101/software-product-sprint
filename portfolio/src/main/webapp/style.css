@@ -1,3 +1,7 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
 #content {
   margin-left: auto;
   margin-right: auto;
@@ -9,11 +13,28 @@
 }
 
 .laptopTop {
+  position: relative;
   height: 105px;
   width: 170px;
   background-color: rgb(179, 191, 194);
   transform: translate(25px, 0px);
   border-radius: 5px 5px 0px 0px;
+  border-bottom: solid #2d2f32;
+}
+.laptopEyeCam {
+  background-color: black;
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 2px rgb(179, 191, 194);
+}
+.laptopScreen {
+  background-color: blueviolet;
+  height: 90px;
+  width: 160px;
+  margin: auto;
 }
 .laptopBottom {
   border-bottom: 70px solid rgb(179, 191, 194);
