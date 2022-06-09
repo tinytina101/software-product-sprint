@@ -16,13 +16,17 @@
  * Adds a random greeting to the page.
  */
 function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+  const greetings = [
+    "I don't like papaya.",
+    'I\'m currently watching "Our Blues","Sh**ting Stars", and "House".',
+    "I've crocheted the Among Us characters.",
+    "My art has been in the High Museum of Arts (Atlanta) in High School.",
+  ];
 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
+  const greetingContainer = document.getElementById("greeting-container");
   greetingContainer.innerText = greeting;
 }
