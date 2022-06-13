@@ -34,8 +34,17 @@ function addRandomGreeting() {
 /** Fetches the Hello MSG from the server and adds it to the page. */
 async function showHello() {
   const responseFromServer = await fetch("/hello");
-  const textFromResponse = await responseFromServer.text();
+
+  //for step 2:
+  //const textFromResponse = await responseFromServer.text();
+
+  // The json() function returns an object that contains fields that we can
+  // reference to create HTML.
+  const json = await responseFromServer.json();
 
   const helloContainer = document.getElementById("hello-container");
-  helloContainer.innerText = textFromResponse;
+  helloContainer.innerHTML = "";
+  // Pick a random greeting.
+  const fact = json[Math.floor(Math.random() * json.length)];
+  helloContainer.innerText = fact;
 }

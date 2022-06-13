@@ -47,6 +47,7 @@
       <artifactId>jetty-annotations</artifactId>
       <version>${jetty.version}</version>
     </dependency>
+    
   </dependencies>
 
   <build>
