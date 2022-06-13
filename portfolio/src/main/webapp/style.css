@@ -530,3 +530,20 @@ i.fa-brands.fa-github {
   top: 3px;
   left: 3px;
 }
+
+.projectOrMessage {
+  display: flex;
+  justify-content: space-between;
+}
+#temp-message {
+  background: linear-gradient(to right, #c7c7c7, #d1d1d1, #d8d7d7);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+#temp-message:hover {
+  cursor: pointer;
+  background: linear-gradient(to right, #df9494, #7dc6ed, #f78492);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
