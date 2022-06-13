@@ -277,7 +277,7 @@
                   background-size: cover;
                 "
               >
-                <h3>
+                <h3 id="contactMe" onclick="contactME()">
                   CONTACT ME
                   <i class="fa-solid fa-paper-plane" style="color: black"></i>
                 </h3>
@@ -318,6 +318,10 @@
               projectNotes.style.display = "grid";
               messageOrProject.style.display = "none";
               messageNotes.style.display = "none";
+            }
+            function contactME() {
+              const popup = document.querySelector(".popup");
+              popup.style.display = "block";
             }
           </script>
         </div>
@@ -459,6 +463,38 @@
       </div>
       <!------div ID content-->
       <div class="entireView"></div>
+      <div class="popup">
+        <div>
+          <div class="popup-content">
+            <h3>CONTACT ME</h3>
+            <form action="/form-handler" method="post">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name..."
+              />
+
+              <textarea
+                id="text-input"
+                name="text-input"
+                placeholder="Your message..."
+              ></textarea>
+              <br />
+              <input id="contact-submit" type="submit" value="Send" />
+            </form>
+          </div>
+          <div class="x" onclick="closePopUp()">
+            <i class="fa-light fa-x" style="color: black"></i>
+          </div>
+          <script>
+            function closePopUp() {
+              const popup = document.querySelector(".popup");
+              popup.style.display = "none";
+            }
+          </script>
+        </div>
+      </div>
     </div>
   </body>
 </html>
