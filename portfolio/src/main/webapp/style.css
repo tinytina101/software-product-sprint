@@ -10,7 +10,7 @@
   margin-top: 7%;
   width: 800px;
   min-height: fit-content;
-  height: 560px;
+  height: 570px;
   position: relative;
 }
 .entireView {
@@ -18,7 +18,7 @@
   /* margin-top: 7%; */
   width: 800px;
   min-height: fit-content;
-  height: 560px;
+  height: 570px;
   position: absolute;
   top: 0;
   background-color: #e2eeed;
@@ -166,8 +166,8 @@ div#trackPad {
 }
 div.table {
   position: absolute;
-  min-height: 195px;
-  height: 200px;
+  min-height: 200px;
+  height: 210px;
   width: 100%;
   background-color: rgb(255, 255, 255);
   top: 359px;
@@ -442,6 +442,9 @@ i.fa-solid {
   font-size: 14px;
 }
 
+.projects {
+  margin-top: 10px;
+}
 .projectNotes {
   font-family: "Patrick Hand", cursive;
 
