@@ -189,7 +189,23 @@
               </div>
               <!---project Label-->
               <div class="temp-message-container">
-                <h3 id="temp-message">Message(s)</h3>
+                <h3 id="temp-message" onclick="showMessages()">Messages</h3>
+              </div>
+            </div>
+            <div class="messageOrProject">
+              <div class="MessageLabel">
+                <span class="projectLetter"><i class="fa-solid fa-m"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-e"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-s"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-s"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-a"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-g"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-e"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-s"></i></span>
+              </div>
+              <!---project Label-->
+              <div>
+                <h3 id="temp-project" onclick="showProjects()">Projects</h3>
               </div>
             </div>
             <div class="projectNotes">
@@ -249,8 +265,38 @@
                 </p>
               </div>
             </div>
+            <div class="messageNotes"></div>
           </div>
           <!---project-->
+
+          <script>
+            function showMessages() {
+              const projectNotes = document.querySelector(".projectNotes");
+              const messageNotes = document.querySelector(".messageNotes");
+              const messageOrProject =
+                document.querySelector(".messageOrProject");
+              const projectOrMessage =
+                document.querySelector(".projectOrMessage");
+
+              console.log(messageNotes.offsetHeight);
+              messageOrProject.style.display = "flex";
+              messageNotes.style.display = "grid";
+              projectOrMessage.style.display = "none";
+              projectNotes.style.display = "none";
+            }
+            function showProjects() {
+              const projectNotes = document.querySelector(".projectNotes");
+              const messageNotes = document.querySelector(".messageNotes");
+              const messageOrProject =
+                document.querySelector(".messageOrProject");
+              const projectOrMessage =
+                document.querySelector(".projectOrMessage");
+              projectOrMessage.style.display = "flex";
+              projectNotes.style.display = "grid";
+              messageOrProject.style.display = "none";
+              messageNotes.style.display = "none";
+            }
+          </script>
         </div>
         <!---wall-->
 

@@ -445,11 +445,12 @@ i.fa-solid {
 .projects {
   margin-top: 10px;
 }
-.projectNotes {
+.projectNotes,
+.messageNotes {
   font-family: "Patrick Hand", cursive;
-
   margin: auto;
 }
+
 li {
   list-style-position: inside;
   font-size: smaller;
@@ -463,16 +464,22 @@ li {
   border: 1px solid #ffff4c94;
 }
 
-.projectNotes {
+.projectNotes,
+.messageNotes {
   display: grid;
   grid-template-columns: repeat(auto-fit, 120px);
   justify-content: center;
   column-gap: 20px;
-  max-width: 400px;
+  min-width: 400px;
   width: 100%;
+  height: 264px;
   row-gap: 20px;
   margin: auto;
   padding: 0;
+}
+
+.messageNotes {
+  display: none;
 }
 .memos {
   font-family: "Patrick Hand", cursive;
@@ -531,17 +538,23 @@ i.fa-brands.fa-github {
   left: 3px;
 }
 
-.projectOrMessage {
+.projectOrMessage,
+.messageOrProject {
   display: flex;
   justify-content: space-between;
 }
-#temp-message {
+.messageOrProject {
+  display: none;
+}
+#temp-message,
+#temp-project {
   background: linear-gradient(to right, #c7c7c7, #d1d1d1, #d8d7d7);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
 
-#temp-message:hover {
+#temp-message:hover,
+#temp-project:hover {
   cursor: pointer;
   background: linear-gradient(to right, #df9494, #7dc6ed, #f78492);
   -webkit-text-fill-color: transparent;
