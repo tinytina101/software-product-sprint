@@ -561,3 +561,6 @@ i.fa-brands.fa-github {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
+button {
+  cursor: pointer;
+}
