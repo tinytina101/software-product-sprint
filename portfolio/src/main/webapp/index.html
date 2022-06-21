@@ -55,6 +55,9 @@
                   ><i class="fa-brands fa-linkedin-in"></i
                 ></a>
               </div>
+              <div id="contactMail" onclick="contactME()">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
             </div>
             <div style="position: relative">
               <button onclick="addRandomGreeting()">Click 4 Fun Facts</button>
@@ -176,15 +179,37 @@
             <span class="clip" id="clip6"></span>
           </div>
           <div class="projects">
-            <div class="projectLabel">
-              <span class="projectLetter"><i class="fa-solid fa-p"></i></span>
-              <span class="projectLetter"><i class="fa-solid fa-r"></i></span>
-              <span class="projectLetter"><i class="fa-solid fa-o"></i></span>
-              <span class="projectLetter"><i class="fa-solid fa-j"></i></span>
-              <span class="projectLetter"><i class="fa-solid fa-e"></i></span>
-              <span class="projectLetter"><i class="fa-solid fa-c"></i></span>
-              <span class="projectLetter"><i class="fa-solid fa-t"></i></span>
-              <span class="projectLetter"><i class="fa-solid fa-s"></i></span>
+            <div class="projectOrMessage">
+              <div class="projectLabel">
+                <span class="projectLetter"><i class="fa-solid fa-p"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-r"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-o"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-j"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-e"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-c"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-t"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-s"></i></span>
+              </div>
+              <!---project Label-->
+              <div class="temp-message-container">
+                <h3 id="temp-message" onclick="showMessages()">Messages</h3>
+              </div>
+            </div>
+            <div class="messageOrProject">
+              <div class="MessageLabel">
+                <span class="projectLetter"><i class="fa-solid fa-m"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-e"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-s"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-s"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-a"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-g"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-e"></i></span>
+                <span class="projectLetter"><i class="fa-solid fa-s"></i></span>
+              </div>
+              <!---project Label-->
+              <div>
+                <h3 id="temp-project" onclick="showProjects()">Projects</h3>
+              </div>
             </div>
             <div class="projectNotes">
               <div class="projectNote">
@@ -236,15 +261,74 @@
                 </ul>
               </div>
               <div class="projectNote">
-                <h3>This is Tina's portfolio!</h3>
-                <p>
+                <button onclick="showHello()">Get Hello</button>
+                <p id="hello-container"></p>
+                <p style="font-size: 13px">
                   Click <a href="/hello">here</a> to see content created by
                   server code. <i class="fa-regular fa-face-grin-stars"></i>
                 </p>
               </div>
             </div>
+            <div class="messageNotes">
+              <div
+                class="projectNote"
+                style="
+                  text-align: center;
+                  background-image: url(images/appearingCat.gif);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                "
+              >
+                <h3 id="contactMe" onclick="contactME()">
+                  CONTACT ME
+                  <i class="fa-solid fa-paper-plane" style="color: black"></i>
+                </h3>
+
+                <p>or</p>
+                <h3>
+                  Leave a public note
+                  <i class="fa-solid fa-comments" style="color: black"></i>
+                </h3>
+              </div>
+            </div>
           </div>
+          <!---project-->
+
+          <script>
+            function showMessages() {
+              const projectNotes = document.querySelector(".projectNotes");
+              const messageNotes = document.querySelector(".messageNotes");
+              const messageOrProject =
+                document.querySelector(".messageOrProject");
+              const projectOrMessage =
+                document.querySelector(".projectOrMessage");
+
+              console.log(messageNotes.offsetHeight);
+              messageOrProject.style.display = "flex";
+              messageNotes.style.display = "grid";
+              projectOrMessage.style.display = "none";
+              projectNotes.style.display = "none";
+            }
+            function showProjects() {
+              const projectNotes = document.querySelector(".projectNotes");
+              const messageNotes = document.querySelector(".messageNotes");
+              const messageOrProject =
+                document.querySelector(".messageOrProject");
+              const projectOrMessage =
+                document.querySelector(".projectOrMessage");
+              projectOrMessage.style.display = "flex";
+              projectNotes.style.display = "grid";
+              messageOrProject.style.display = "none";
+              messageNotes.style.display = "none";
+            }
+            function contactME() {
+              const popup = document.querySelector(".popup");
+              popup.style.display = "block";
+            }
+          </script>
         </div>
+        <!---wall-->
 
         <div class="desk">
           <div class="laptop">
@@ -382,6 +466,38 @@
       </div>
       <!------div ID content-->
       <div class="entireView"></div>
+      <div class="popup">
+        <div>
+          <div class="popup-content">
+            <h3>CONTACT ME</h3>
+            <form action="/form-handler" method="post">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name..."
+              />
+
+              <textarea
+                id="text-input"
+                name="text-input"
+                placeholder="Your message..."
+              ></textarea>
+              <br />
+              <input id="contact-submit" type="submit" value="Send" />
+            </form>
+          </div>
+          <div class="x" onclick="closePopUp()">
+            <i class="fa-light fa-x" style="color: black"></i>
+          </div>
+          <script>
+            function closePopUp() {
+              const popup = document.querySelector(".popup");
+              popup.style.display = "none";
+            }
+          </script>
+        </div>
+      </div>
     </div>
   </body>
 </html>
