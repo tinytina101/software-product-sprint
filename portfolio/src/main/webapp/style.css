@@ -581,7 +581,8 @@ i.fa-regular.fa-envelope {
 button {
   cursor: pointer;
 }
-.popup {
+.popup,
+.popup2 {
   background-color: rgba(133, 63, 63, 0.6);
   width: 100%;
   height: 100%;
@@ -606,7 +607,8 @@ button {
   align-items: center;
   justify-content: center;
 }
-#contact-submit {
+#contact-submit,
+#message-submit {
   height: 20px;
   width: 100%;
   border-radius: 4px;
@@ -630,7 +632,8 @@ button {
   transition: 0.5s;
 }
 
-#contact-submit:hover {
+#contact-submit:hover,
+#message-submit:hover {
   background-image: linear-gradient(
     to right,
     #ff6e7f 0%,
@@ -642,7 +645,8 @@ button {
   color: RIGHT;
 }
 
-#contact-submit:hover {
+#contact-submit:hover,
+#message-submit:hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
@@ -668,10 +672,12 @@ textarea {
   top: 27%;
   left: 79%;
 }
-#contactMe {
+#contactMe,
+#publicMessage {
   cursor: pointer;
 }
 
-#contactMe:hover {
+#contactMe:hover,
+#publicMessage:hover {
   color: rgb(190, 72, 92);
 }

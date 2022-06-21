@@ -286,7 +286,7 @@
                 </h3>
 
                 <p>or</p>
-                <h3>
+                <h3 id="publicMessage" onclick="publicMessage()">
                   Leave a public note
                   <i class="fa-solid fa-comments" style="color: black"></i>
                 </h3>
@@ -324,6 +324,10 @@
             }
             function contactME() {
               const popup = document.querySelector(".popup");
+              popup.style.display = "block";
+            }
+            function publicMessage() {
+              const popup = document.querySelector(".popup2");
               popup.style.display = "block";
             }
           </script>
@@ -498,6 +502,40 @@
           </script>
         </div>
       </div>
+      <!----popup2------------>
+      <div class="popup2">
+        <div>
+          <div class="popup-content">
+            <h3>Public Message</h3>
+            <form action="/new-message" method="post">
+              <input
+                type="text"
+                id="name2"
+                name="name"
+                placeholder="Your name..."
+              />
+
+              <textarea
+                id="text-input2"
+                name="text-input"
+                placeholder="Your message..."
+              ></textarea>
+              <br />
+              <input id="message-submit" type="submit" value="Submit" />
+            </form>
+          </div>
+          <div class="x" onclick="closePopUp2()">
+            <i class="fa-light fa-x" style="color: black"></i>
+          </div>
+          <script>
+            function closePopUp2() {
+              const popup = document.querySelector(".popup2");
+              popup.style.display = "none";
+            }
+          </script>
+        </div>
+      </div>
+      <!----popup2- end------------------>
     </div>
   </body>
 </html>
