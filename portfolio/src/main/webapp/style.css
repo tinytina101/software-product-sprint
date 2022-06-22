@@ -467,7 +467,8 @@ li {
 .projectNotes,
 .messageNotes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 120px);
+  grid-template-columns: repeat(auto-fit, 130px);
+  grid-template-rows: repeat(auto-fit, 120px);
   justify-content: center;
   column-gap: 20px;
   min-width: 400px;
@@ -680,4 +681,20 @@ textarea {
 #contactMe:hover,
 #publicMessage:hover {
   color: rgb(190, 72, 92);
+}
+
+h6.userName {
+  text-align: end;
+}
+.userName::before {
+  content: "-";
+}
+.userName::after {
+  content: "\00a0"; /** this is for a space */
+}
+
+.userMessage {
+  color: rgb(20, 48, 102);
+  text-align: center;
+  line-break: anywhere;
 }

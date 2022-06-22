@@ -20,7 +20,7 @@
     ></script>
     <script src="script.js"></script>
   </head>
-  <body onload="setClock()">
+  <body onload="setClock();loadTasks()">
     <!--plays the music on loop and on repeat-->
     <audio controls autoplay loop>
       <source src="audio/emoji_2oclock_featJUNNY.mp3" type="audio/mpeg" />
@@ -511,13 +511,13 @@
               <input
                 type="text"
                 id="name2"
-                name="name"
+                name="name2"
                 placeholder="Your name..."
               />
 
               <textarea
                 id="text-input2"
-                name="text-input"
+                name="text-input2"
                 placeholder="Your message..."
               ></textarea>
               <br />
