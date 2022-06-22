@@ -12,6 +12,33 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+function loadTasks() {
+  fetch("/list-messages")
+    .then((response) => response.json())
+    .then((notes) => {
+      const noteListElement = document.querySelector(".messageNotes");
+      notes.forEach((note) => {
+        noteListElement.appendChild(createMsgElement(note));
+      });
+    });
+}
+
+function createMsgElement(note) {
+  const msgElement = document.createElement("div");
+  msgElement.className = "projectNote";
+
+  const message = document.createElement("h3");
+  message.className = "userMessage";
+  message.innerText = note.message;
+  const name = document.createElement("h6");
+  name.className = "userName";
+  name.innerText = note.name;
+
+  msgElement.appendChild(message);
+  msgElement.appendChild(name);
+  return msgElement;
+}
+
 /**
  * Adds a random greeting to the page.
  */
