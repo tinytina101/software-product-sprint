@@ -696,5 +696,5 @@ h6.userName {
 .userMessage {
   color: rgb(20, 48, 102);
   text-align: center;
-  line-break: anywhere;
+  word-break: break-word;
 }
