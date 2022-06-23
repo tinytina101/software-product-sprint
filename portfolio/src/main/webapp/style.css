@@ -467,7 +467,8 @@ li {
 .projectNotes,
 .messageNotes {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 120px);
+  grid-template-columns: repeat(auto-fit, 130px);
+  grid-template-rows: repeat(auto-fit, 120px);
   justify-content: center;
   column-gap: 20px;
   min-width: 400px;
@@ -581,7 +582,8 @@ i.fa-regular.fa-envelope {
 button {
   cursor: pointer;
 }
-.popup {
+.popup,
+.popup2 {
   background-color: rgba(133, 63, 63, 0.6);
   width: 100%;
   height: 100%;
@@ -606,7 +608,8 @@ button {
   align-items: center;
   justify-content: center;
 }
-#contact-submit {
+#contact-submit,
+#message-submit {
   height: 20px;
   width: 100%;
   border-radius: 4px;
@@ -630,7 +633,8 @@ button {
   transition: 0.5s;
 }
 
-#contact-submit:hover {
+#contact-submit:hover,
+#message-submit:hover {
   background-image: linear-gradient(
     to right,
     #ff6e7f 0%,
@@ -642,7 +646,8 @@ button {
   color: RIGHT;
 }
 
-#contact-submit:hover {
+#contact-submit:hover,
+#message-submit:hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
@@ -668,10 +673,28 @@ textarea {
   top: 27%;
   left: 79%;
 }
-#contactMe {
+#contactMe,
+#publicMessage {
   cursor: pointer;
 }
 
-#contactMe:hover {
+#contactMe:hover,
+#publicMessage:hover {
   color: rgb(190, 72, 92);
+}
+
+h6.userName {
+  text-align: end;
+}
+.userName::before {
+  content: "-";
+}
+.userName::after {
+  content: "\00a0"; /** this is for a space */
+}
+
+.userMessage {
+  color: rgb(20, 48, 102);
+  text-align: center;
+  line-break: anywhere;
 }
